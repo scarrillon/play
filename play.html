@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="style.css">
+<!--
+	<script src="js/util.js" defer></script>
+	<script src="js/vec4.js" defer></script>
+	<script src="js/mat4.js" defer></script>
+	<script src="js/canvas.js" defer></script>
+-->
+	<script src="bower_components/jquery/dist/jquery.min.js" async></script>
+	<script src="bower_components/moment/min/moment-with-locales.min.js" async></script>
+	
+	<script src="js/utils.js" async></script>
+	<script src="js/ai.js" async></script>
+	
+	<script src="play.js" async></script>
+</head>
+<body>
+	<header>
+	</header>
+	
+	<div class="displayTime">
+		<var id="time"></var>
+		<div id="hour" class="clock-hour"></div>
+		<div id="minute" class="clock-minute"></div>
+		<div id="second" class="clock-second"></div>
+	</div>
+	
+	<nav>
+		Super menu
+		<a href="#1"><button>option 1</button></a>
+		<a href="#2"><button>option 2</button></a>
+	</nav>
+	
+	<main>
+	</main>
+	
+	<div id="notes">
+		2 représentations : subjective et objective
+		à afficher côte à côte puis éventuellement dans des onglets différents
+		avec "moteur" qui s'exécute dans un thread à part (worker) voire complètement ailleurs (serveur) ou même encore de façon asynchrone,
+		ie le moteur s'exécute et trace/log son état (en RAM ou DB ou local storage ou ...) et on peut rejouer ces traces
+			=> meilleure chose à faire : inspection de scénario manuel ou via visualisation
+			/!\ volume données
+		
+		smart hello world : agent who wanders and say hello to "people" (ie static images of people)
+		
+		réflexon : AI remplace certains besoins, tranformation du travail des hommes vers le monde des services où les machines ne pourront jamais les remplacer
+			chaleur humaine (au sens littéral de la chaleur, du contact)
+			empathie avec toutes les expressions corporelle
+			toutes les interactions avec les émotions telle que la colère, la surprise, la joie, l'amour/amitié...
+			métiers d'aide : conseiller d'orientation, infirmière/aide-soignante, psychologue, garde d'enfants
+			métiers de contact : masseur, ostéo, prostitution ?
+			métiers de transmission : professeur/formateur, guide touristique
+			métiers d'art, artisanat : recherche du luxe, d'un cachet particulier, 
+									de la personalisation/sur-mesure peut-être même avec la propre implication du client tel que pour les habitations collaboratives
+			art : cinéma, littérature, peinture...
+			loi : on ne laissera jamais des robots s'occuper de juger, c'est une chose qu'on voudra toujours garder aux magistrats humains
+				on sera réticents à avoirs des robots avocats mais ça arrivera
+			politique : choix d'orientation future notamment idéologique, style de vie, valeurs... (et par conséquent choix technologiques)
+		
+			mais quelque part faudra découpler revenu et utilité, offre et demande... et ça ça s'oppose à l'implication individuelle, à l'innovation, en tout cas au modèle capitalist traditionnel	
+	</div>
+<!--	<canvas></canvas>-->
+</body>
+</html>
