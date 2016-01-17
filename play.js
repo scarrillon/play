@@ -6,7 +6,7 @@ Utils.mergeConfig(ai.config, ai.predefinedConfig.v1);
 $(document).ready(function() {
 	"use strict";
 	
-	class Play {
+	class Clock {
 		updateClock(time) {
 			var now = moment(time),
 				second = now.seconds() * 6,
@@ -18,11 +18,11 @@ $(document).ready(function() {
 			$('#second').css("transform", "rotate(" + second + "deg)");
 		}
 
-		updateTime() {
+		update() {
 			var savedTime = this.time();
 			$("#time").get(0).innerHTML = moment(savedTime).format("HH:mm:ss");
 			this.updateClock(savedTime);
-			setTimeout(() => this.updateTime(), 1000);
+			setTimeout(() => this.update(), 1000);
 		}
 		
 		/**
@@ -35,5 +35,5 @@ $(document).ready(function() {
 		}
 	}
 	
-	new Play().updateTime();
+	new Clock().update();
 });
