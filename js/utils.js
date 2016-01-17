@@ -7,6 +7,12 @@ class ConfigurationException extends Error {
 	}
 }
 
+class AbstractMethodError extends Error {
+	constructor() {
+		super("this abstract method must be implemented");
+	}
+}
+
 class Utils {
 	static * sequenceGenerator() {
 		var i = 0;

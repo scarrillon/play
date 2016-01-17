@@ -31,3 +31,37 @@ function time() {
 			throw new ConfigurationException("invalid configuration")
 	}
 }
+
+var world = 0;
+
+class Agent {
+	constructor() {
+		this.memory = [];
+		this.interactionAbilities = {
+			moveForward : () => {
+				var interaction = new IteractionAbility("move forward", this, world);
+				interaction.use = function() {
+					world++;
+				}
+			}
+		}
+	}
+}
+
+class InteractionAbility {
+	/**
+	 * @param {string} name - Name of interaction, purely descriptive for representability in our mind
+	 */
+	constructor(name, agent, world) {
+		this.name = name;
+		this.agent = agent;
+		this.world = world;
+	}
+	
+	/**
+	 * Alters the agent and/or the world
+	 */
+	use() {
+		throw new AbstractMethodError();
+	}
+}
